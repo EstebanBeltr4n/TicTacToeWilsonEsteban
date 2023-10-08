@@ -20,7 +20,7 @@ public class EntryServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String user = request.getParameter("User");
+        String user = request.getParameter("Usuario");
         boolean userFirst = user != null;
         GameBean game = (GameBean) request.getSession(true).getAttribute("gameBean");
         game.setStartByUser(userFirst);
@@ -63,6 +63,6 @@ public class EntryServlet extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Process initial form response.";
+        return "Procesa la respuesta inicial del formulario.";
     }
 }
